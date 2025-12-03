@@ -8,7 +8,7 @@ def index(request):
 
     post_list = Post.objects.select_related(
         'category', 'location', 'author'
-        ).filter(
+    ).filter(
         pub_date__lte=timezone.now(),
         is_published=True,
         category__is_published=True
