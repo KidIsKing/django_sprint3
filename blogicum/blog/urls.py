@@ -29,8 +29,7 @@ profile_urls = [
 ]
 
 urlpatterns = [
-    path('',
-         views.index, name='index'),
+    path('', views.index, name='index'),
     path('category/<slug:category_slug>/',
          views.category_posts, name='category_posts'),
     path('posts/', include(post_urls)),
