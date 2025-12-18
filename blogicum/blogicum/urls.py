@@ -21,6 +21,7 @@ from django.views.generic.edit import CreateView
 from django.urls import include, path, reverse_lazy
 
 
+# Хендлеры для ошибок 404 и 500
 handler404 = 'pages.views.page_not_found'
 handler500 = 'pages.views.internal_server_error'
 
@@ -28,6 +29,7 @@ urlpatterns = [
     path('', include('blog.urls')),
     path('pages/', include('pages.urls')),
     path('admin/', admin.site.urls),
+    # Адрес страниц для регистрации пользователей
     path('auth/', include('django.contrib.auth.urls')),
     path(
         'auth/registration/',

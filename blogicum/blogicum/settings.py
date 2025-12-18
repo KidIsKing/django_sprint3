@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-t4=8wjgx&%@o(@%gw8c8bvjx1-la$3v$e9f6+0(&l*!6g823j('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
@@ -40,6 +40,7 @@ LOGIN_REDIRECT_URL = 'blog:index'
 
 LOGIN_URL = 'login'
 
+# Настройка для ошибки 403
 CSRF_FAILURE_VIEW = 'pages.views.csrf_failure'
 
 # Application definition
