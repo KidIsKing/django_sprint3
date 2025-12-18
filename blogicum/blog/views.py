@@ -160,6 +160,7 @@ def delete_comment(request, post_id, comment_id):
     return render(request, 'blog/comment.html', context)
 
 
+# Создать страницу пользователя
 def profile(request, username):
     """Отображение страницы пользователя"""
     profile = get_object_or_404(

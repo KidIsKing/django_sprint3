@@ -19,6 +19,9 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
+    def __str__(self):
+        return self.name
+
 
 class Category(BaseModel):
     title = models.CharField(max_length=TEXT_LENGTH, verbose_name='Заголовок')
